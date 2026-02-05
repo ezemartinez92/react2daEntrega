@@ -7,8 +7,7 @@ const ItemDetail = ({ id, nombre, precio, category, img, description, stock, add
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity);
-        
-        // Incluimos la imagen para que el carrito pueda mostrarla
+    
         const item = {
             id, nombre, precio, img
         };

@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
             .catch(error => console.error(error))
             .finally(() => setLoading(false));
 
-    }, [categoryId]); // Importante: se ejecuta cada vez que cambia la categoría
+    }, [categoryId]); 
 
     return (
         <div className="container">

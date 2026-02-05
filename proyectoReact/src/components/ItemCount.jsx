@@ -13,14 +13,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return (
         <div className="item-count-wrapper">
-            {/* Controles de + y - */}
             <div className="qty-selector">
                 <button className="qty-btn" onClick={decrement}>-</button>
                 <span className="qty-number">{quantity}</span>
                 <button className="qty-btn" onClick={increment}>+</button>
             </div>
 
-            {/* Botón de acción principal */}
             <button 
                 className="btn-add-to-cart" 
                 onClick={() => onAdd(quantity)}

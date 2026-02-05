@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'; // Asegúrate de que React esté correctamente importado
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../data/asincronismo'; 
 import ItemDetail from './ItemDetail';

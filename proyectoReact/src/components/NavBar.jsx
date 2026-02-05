@@ -4,13 +4,13 @@ import { Link, NavLink } from 'react-router-dom';
 const NavBar = ({ cartCount }) => {
   return (
     <nav className="navbar">
-      {/* Link al home */}
+    
       <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'white' }}>
        Zapatos Premium
       </Link>
       
       <ul className="nav-links">
-        {/* Opción Home directa (Opcional) */}
+      
         <li>
             <NavLink to="/" className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Inicio</NavLink>
         </li>
