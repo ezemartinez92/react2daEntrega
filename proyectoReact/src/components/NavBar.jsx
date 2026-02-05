@@ -6,18 +6,24 @@ const NavBar = ({ cartCount }) => {
     <nav className="navbar">
       {/* Link al home */}
       <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'white' }}>
-        SHOES SHOP
+       Zapatos Premium
       </Link>
       
       <ul className="nav-links">
+        {/* Opción Home directa (Opcional) */}
         <li>
-            <NavLink to="/category/deportivas" className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Deportivas</NavLink>
+            <NavLink to="/" className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Inicio</NavLink>
         </li>
-        <li>
-            <NavLink to="/category/casual" className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Casual</NavLink>
-        </li>
-        <li>
-            <NavLink to="/category/botas" className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Botas</NavLink>
+
+        {/* MENÚ DESPLEGABLE */}
+        <li className="dropdown">
+            <span className="Option dropdown-trigger">Colecciones ▼</span>
+            
+            <div className="dropdown-content">
+                <NavLink to="/category/casual" className="dropdown-item">Casual</NavLink>
+                <NavLink to="/category/formal" className="dropdown-item">Formal</NavLink>
+                <NavLink to="/category/botas" className="dropdown-item">Botas</NavLink>
+            </div>
         </li>
       </ul>
 
